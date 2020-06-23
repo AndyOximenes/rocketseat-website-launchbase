@@ -1,0 +1,22 @@
+{%extends "layout.njk"%}
+
+{% block head %}
+    <title>Not found - 404</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="not-found">
+        <h1 class="not-found title">Page not found - 404</h1>
+        <h1>Alguns motivos para você ter encontrado esse erro</h1>
+        <ol>
+            <li>Pode ser que a URL (o domínio) do site que você esteja querendo acessar tenha sido digitada de forma errada no navegador. Ou que essa mesma URL não seja a você esteja pensando que é a certa para o site que quer visitar.
+            </li>
+            <li>Além da URL, é possível que a extensão (por exemplo, .com.br) não seja a correta para acessar um site. Outras variações conhecidas de extensões de domínio são .com, .org, .edu, .xyz, entre outras.</li>
+            <li>Quando um projeto não cresce na internet, um produto acabou ou sai de linha, é possível que o dono do site não queira mais continuar com ele. Essa página que você quer acessar pode ser desativada ou até mesmo excluída. Isso também vale para perfis de usuários em redes sociais, como no Facebook.</li>
+            <li>Se o servidor da hospedagem da página que você quer visitar estiver instável ou sobrecarregado, é possível que ela não possa ser acessada. E isso mesmo que você saiba que ela existe, bem como se a URL e a extensão estiverem corretas.</li>
+            <li>Quando você baixar e executar algum programa de origem duvidosa, um vírus ou algum tipo de malware infecte o navegador que você usa. Desse jeito, o navegador perde desempenho e não consegue redirecionar os acessos ao servidor do site que você quer visitar.</li>
+        </ol>
+    </div>
+
+{% endblock %}

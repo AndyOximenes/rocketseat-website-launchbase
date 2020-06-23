@@ -106,16 +106,14 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 100px;
-  max-width: 1000px;
+  max-width: 80%;
   height: 300px;
   margin: 0 auto;
 }
 
 .card {
   background: rgba(0, 0, 0, 0.1);
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+  border-radius: 100px;
   padding: 30px;
 }
 
@@ -205,4 +203,25 @@ iframe {
   height: 90%;
   position: absolute;
   top: 5%;
+}
+
+/* === NOT FOUND PAGE === */
+
+.not-found {
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 50px auto 30px auto;
+}
+
+.not-found ol li {
+  color: white;
+  font-size: 18px;
+  line-height: 26px;
+  width: 50%;
+  margin: 45px auto;
 }

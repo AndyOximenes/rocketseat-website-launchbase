@@ -12,15 +12,15 @@ nunjucks.configure("views", {
 });
 
 server.get("/", (req, res) => {
-  res.render("courses");
+  return res.render("courses");
 });
 
 server.get("/about", (req, res) => {
-  res.render("about");
+  return res.render("about");
 });
 
-server.get("/", (req, res) => {
-  res.send("Hi");
+server.use((req, res) => {
+  res.status(404).render("not-found");
 });
 
 server.listen(5000, () => {
