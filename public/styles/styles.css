@@ -3,7 +3,8 @@
 :root {
   --color-green: #50fa7b;
   --color-purple: #7159c1;
-  --color-orange: #f3cb18a8;
+  --color-orange: #eca409;
+  --color-white: white;
 }
 
 * {
@@ -47,7 +48,7 @@ header {
 
 #wrapper img {
   border-radius: 50%;
-  border: 5px solid var(--color-green);
+  border: 5px solid var(--color-purple);
   margin-bottom: 32px;
   height: 300px;
 }
@@ -146,18 +147,18 @@ header {
   text-align: center;
 }
 
-.purple:hover {
-  background-color: var(--color-purple);
+.starter:hover {
+  background-color: rgba(112, 87, 193, 0.4);
   transition: 200ms;
 }
 
-.orange:hover {
-  background-color: var(--color-orange);
+.launchbase:hover {
+  background-color: rgba(236, 164, 9, 0.2);
   transition: 200ms;
 }
 
-.green:hover {
-  background-color: var(--color-green);
+.gostack:hover {
+  background-color: rgba(80, 250, 123, 0.2);
   transition: 200ms;
 }
 
@@ -169,15 +170,12 @@ header {
   height: 100%;
   position: fixed;
   top: 0;
-
-  /* Esconde o overlay quando ele não está ativo */
-
   opacity: 0;
   visibility: hidden;
 }
 
 .modal {
-  background-color: white;
+  background-color: var(--color-white);
   width: 90%;
   height: 90%;
   margin: 5vh auto;
@@ -213,14 +211,14 @@ iframe {
 }
 
 .title {
-  color: white;
+  color: var(--color-white);
   font-size: 48px;
   line-height: 58px;
   margin: 50px auto 30px auto;
 }
 
 .not-found ol li {
-  color: white;
+  color: var(--color-white);
   font-size: 18px;
   line-height: 26px;
   width: 50%;
