@@ -7,24 +7,23 @@
 {% block content %}
 
   <div id="wrapper">
-    <img src="https://rocketseat.gallerycdn.vsassets.io/extensions/rocketseat/rocketseatreactnative/3.0.1/1588456740326/Microsoft.VisualStudio.Services.Icons.Default" alt="rocketseat"/>
-    <h1>Rocketseat</h1>
+    <img src="{{ about.avatar_url }}" alt="{{ about.company }}"/>
+    <h1>{{ about.company }}</h1>
     <h2>
-      As melhores tecnologias em programação, direto ao ponto e do jeito certo.
+      {{ about.description }}
     </h2>
-    <h3>Principais tecnologias da Rocketseat</h3>
-    <ul>
-      <li>React.js</li>
-      <li>React Native</li>
-      <li>Node.js</li>
-    </ul>
+    <h3>{{ about.main_techs }}</h3>
+    {% for tech in about.techs %}
+      <ul>
+        <li>{{ tech.name }}</li>
+      </ul>
+    {% endfor %}
   </div>
 
   <div id="links-footer" class="links">
-    <a href="https://rocketseat.com.br/" target="_blank">Site</a>
-    <a href="https://github.com/Rocketseat" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/school/rocketseat/?originalSubdomain=br" target="_blank">LinkedIn</a >
-    <a href="https://www.facebook.com/rocketseat/" target="_blank">Facebook</a >
+    {% for link in about.links %}
+      <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+    {% endfor %}
   </div>
 
 {% endblock %}
