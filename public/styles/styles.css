@@ -110,6 +110,7 @@ header {
     max-width: 80%;
     height: 300px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .card {
@@ -239,4 +240,8 @@ iframe {
     right: 40%;
     top: -40px;
     border-radius: 16px;
+}
+
+.featured:hover {
+    font-weight: bold;
 }
