@@ -1,20 +1,20 @@
 {%extends "layout.njk"%}
 
 {% block head %}
-    <title>Cursos - Rocketseat</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <title>Cursos - Rocketseat</title>
 
 {% endblock %}
 
 {% block content %}
+
     <div id="wrapper">
         <h1>Cursos</h1>
     </div>
 
     <section class="cards">
         {% for item in items %}
-            <div class="card {{ item.id }}" id="{{ item.id }}">
+            <div class="card {{ item.content }}" id="{{ item.id }}">
                 <div class="card_image-container {{ 'featured-wrapper' if item.featured }}">
                     <img src="{{ item.image }}" alt="Imagem de {{ item.id }}"/>
                     {% if item.featured %}
@@ -32,18 +32,6 @@
         {% endfor %}
 
     </section>
-
-    <div class="modal-overlay">
-        <div class="modal">
-            <a class="close-modal">
-                <i class="material-icons">close</i>
-            </a>
-
-            <div class="modal-content">
-                <iframe src="" frameborder="0"></iframe>
-            </div>
-        </div>
-    </div>
 
     <script src="scripts.js"></script>
 

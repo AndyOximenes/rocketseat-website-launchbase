@@ -55,6 +55,20 @@ server.get("/about", (req, res) => {
     return res.render("about", { about });
 });
 
+server.get("/courses/:id", (req, res) => {
+    const { id } = req.params;
+
+    const course = courses.find((course) => {
+        return course.id == id;
+    });
+
+    if (!course) {
+        return res.render("not-found");
+    }
+
+    return res.render("course", { item: course });
+});
+
 server.use((req, res) => {
     res.status(404).render("not-found");
 });
